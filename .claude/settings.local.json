@@ -19,7 +19,9 @@
       "Bash(launchctl list *)",
       "Bash(launchctl start *)",
       "Bash(bash run-daily.sh)",
-      "Bash(echo \"exit: $?\")"
+      "Bash(echo \"exit: $?\")",
+      "Read(//Users/rinkuu/**)",
+      "Bash(mv /Users/rinkuu/Desktop/github /Users/rinkuu/daily-activity)"
     ]
   }
 }

@@ -4,7 +4,7 @@ set -euo pipefail
 # Runs the daily update and pushes it. Called by launchd (see the plist).
 # Logs go to daily.log so you can see what happened on each run.
 
-REPO_DIR="/Users/rinkuu/Desktop/github"
+REPO_DIR="/Users/rinkuu/daily-activity"
 cd "$REPO_DIR"
 
 {
