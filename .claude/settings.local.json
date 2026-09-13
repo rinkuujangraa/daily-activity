@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config *)",
+      "Bash(gh auth *)",
+      "Bash(chmod +x update.sh)",
+      "Bash(git init *)",
+      "Bash(bash update.sh)",
+      "Bash(git add *)",
+      "Bash(git commit -q -m 'initial: daily activity commit setup *)"
+    ]
+  }
+}
