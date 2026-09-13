@@ -7,7 +7,19 @@
       "Bash(git init *)",
       "Bash(bash update.sh)",
       "Bash(git add *)",
-      "Bash(git commit -q -m 'initial: daily activity commit setup *)"
+      "Bash(git commit -q -m 'initial: daily activity commit setup *)",
+      "Bash(git branch *)",
+      "Bash(gh repo *)",
+      "Bash(gh workflow *)",
+      "Bash(gh run *)",
+      "Bash(gh api *)",
+      "Bash(chmod +x run-daily.sh)",
+      "Bash(launchctl unload *)",
+      "Bash(launchctl load *)",
+      "Bash(launchctl list *)",
+      "Bash(launchctl start *)",
+      "Bash(bash run-daily.sh)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
