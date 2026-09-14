@@ -14,7 +14,7 @@ cd "$REPO_DIR"
   if git diff --cached --quiet; then
     echo "nothing to commit"
   else
-    git commit -m "daily activity: $(date -u '+%Y-%m-%d')"
+    git commit -m "activity: $(date -u '+%Y-%m-%d %H:%M UTC')"
     git push origin main
     echo "pushed"
   fi

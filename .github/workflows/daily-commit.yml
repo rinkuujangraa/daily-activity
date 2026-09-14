@@ -2,10 +2,14 @@ name: daily-commit
 
 on:
   schedule:
-    # Runs every day at 08:17 UTC. GitHub cron is UTC-only and can lag
-    # a few minutes under load, which is normal.
-    - cron: "17 8 * * *"
-  workflow_dispatch: {} # lets you trigger a run manually from the Actions tab
+    # 3 runs a day at natural-looking times (UTC). Adjust to taste.
+    # 09:17 UTC  ≈ morning   (e.g. 5am EST / 2am PST)
+    - cron: "17 9 * * *"
+    # 14:43 UTC  ≈ afternoon (e.g. 10am EST / 7am PST)
+    - cron: "43 14 * * *"
+    # 20:31 UTC  ≈ evening   (e.g. 4pm EST / 1pm PST)
+    - cron: "31 20 * * *"
+  workflow_dispatch: {}
 
 permissions:
   contents: write
@@ -17,13 +21,11 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Make a daily change
+      - name: Make a change
         run: bash update.sh
 
       - name: Commit and push
         run: |
-          # Author email MUST match a verified email on your GitHub account,
-          # or the commit will not count toward your contribution graph.
           git config user.name "rinkuujangraa"
           git config user.email "rinkuujangraa@gmail.com"
           git add -A
@@ -31,5 +33,5 @@ jobs:
             echo "Nothing to commit."
             exit 0
           fi
-          git commit -m "daily activity: $(date -u '+%Y-%m-%d')"
+          git commit -m "activity: $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
